@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>كبدة مسعد | ملك العروض - الإسماعيلية</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&display=swap" rel="stylesheet">
+<script>tailwind.config={theme:{extend:{colors:{gold:'#D4AF37',goldLight:'#F3E5AB',dark:'#0A0A0C',card:'#141417'}}}}</script>
+<style>body{font-family:'Cairo',sans-serif;background:#060608;color:#fff} .gold-text{background:linear-gradient(135deg,#FFF2A8,#D4AF37,#A67C00);-webkit-background-clip:text;-webkit-text-fill-color:transparent} .glass{background:rgba(20,20,23,0.85);backdrop-filter:blur(20px);border:1px solid rgba(212,175,55,0.15)} .offer-card{background:radial-gradient(ellipse at top left, rgba(212,175,55,0.12), transparent), #141417; border:1px solid rgba(212,175,55,0.25); transition:all 0.5s} .offer-card:hover{transform:translateY(-8px);border-color:#D4AF37;box-shadow:0 20px 60px rgba(212,175,55,0.25)}</style>
+</head>
+<body>
+
+<header class="fixed top-0 w-full z-50 glass border-b border-gold/20">
+<div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<img src="logo.png" alt="كبدة مسعد" onerror="this.src='https://placehold.co/100x100/111/D4AF37?text=MS'" class="w-12 h-12 rounded-full border-2 border-gold shadow-lg shadow-gold/20 object-cover">
+<div><h1 class="text-xl font-black gold-text">كبدة مسعد</h1><p class="text-[10px] tracking-[0.3em] text-goldLight/60">KING OF OFFERS - ISMAILIA</p></div>
+</div>
+<div class="flex items-center gap-3">
+<a href="tel:01015861991" class="hidden md:flex items-center gap-2 text-xs border border-gold/20 px-4 py-2 rounded-full"><i class="fa-solid fa-phone text-gold"></i> 01015861991</a>
+<button onclick="toggleCart()" class="bg-gradient-to-r from-yellow-200 via-[#D4AF37] to-[#B8860B] text-black px-6 py-2.5 rounded-full font-black text-sm flex items-center gap-2"><i class="fa-solid fa-bag-shopping"></i> السلة <span id="cart-count" class="bg-black text-gold w-5 h-5 rounded-full flex items-center justify-center text-xs">0</span></button>
+</div>
+</div>
+</header>
+
+<section class="pt-28 pb-10 px-6 max-w-7xl mx-auto">
+<div class="grid lg:grid-cols-2 gap-10 items-center">
+<div class="space-y-6">
+<div class="inline-flex items-center gap-2 border border-gold/30 rounded-full px-4 py-1.5 text-xs"><span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span><span class="text-goldLight">مفتوح الآن • توصيل مجاني</span></div>
+<h2 class="text-5xl md:text-6xl font-black leading-[0.9]">عروض<br><span class="gold-text">الدمار</span><br>رجعت 🔥</h2>
+<div class="flex items-center gap-4"><img src="logo.png" class="w-16 h-16 rounded-full border-2 border-gold"><div><p class="font-black">جزارة سيد خلف & كبدة مسعد</p><p class="text-xs text-gray-400">الإسماعيلية - شارع البحري - عرايشية مصر</p></div></div>
+<p class="text-gray-400 leading-relaxed max-w-lg">عملنالكو عروض جديدة كتيررر.. 5 عروض تدمر أي سعر. لحمة بلدي 100% طازة يومياً.</p>
+</div>
+<div class="relative"><div class="absolute inset-0 bg-gradient-to-r from-yellow-600/20 to-orange-600/20 blur-[80px] rounded-full"></div><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800" class="relative rounded-[2rem] border border-gold/20 shadow-2xl object-cover h-[460px] w-full"></div>
+</div>
+</section>
+
+<section class="px-6 max-w-7xl mx-auto pb-20">
+<h3 class="text-3xl font-black mb-8">قائمة <span class="gold-text">العروض الملكية</span> 👑</h3>
+<div id="offers" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+<div class="mt-20"><div class="flex items-center gap-4 mb-8"><div class="h-[1px] flex-1 bg-gradient-to-r from-transparent to-gold/30"></div><h3 class="font-black text-xl text-goldLight">المنيو الفاخر - فينو وبلدي</h3><div class="h-[1px] flex-1 bg-gradient-to-l from-transparent to-gold/30"></div></div><div id="menu" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div></div>
+</section>
+
+<div id="cart" class="fixed inset-0 z-[60] hidden"><div class="absolute inset-0 bg-black/80 backdrop-blur-md" onclick="toggleCart()"></div><div class="absolute bottom-0 left-0 right-0 md:left-auto md:top-0 md:bottom-0 md:w-[440px] bg-[#0F0F10] border-t md:border-l border-gold/20 rounded-t-[2rem] md:rounded-none flex flex-col max-h-[90vh] md:max-h-screen"><div class="p-6 border-b border-white/5 flex justify-between items-center"><div class="flex items-center gap-3"><img src="logo.png" class="w-9 h-9 rounded-full border border-gold"><h3 class="font-black text-lg"><span class="gold-text">سلة الملوك</span> - <span id="cart-total-top">0ج</span></h3></div><button onclick="toggleCart()" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button></div><div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-3"></div><div class="p-6 bg-black/50 border-t border-gold/10 space-y-4"><div class="flex justify-between font-black text-xl"><span>الإجمالي</span><span id="cart-final" class="gold-text text-2xl">0ج</span></div><form onsubmit="sendWA(event)" class="space-y-3"><input id="n" required placeholder="الاسم" class="w-full bg-white/[0.04] border border-white/10 rounded-full px-5 py-3.5 text-sm focus:border-gold outline-none"><div class="grid grid-cols-2 gap-3"><input id="p" required placeholder="رقم الهاتف" class="bg-white/[0.04] border border-white/10 rounded-full px-5 py-3.5 text-sm"><input id="a" required placeholder="العنوان" class="bg-white/[0.04] border border-white/10 rounded-full px-5 py-3.5 text-sm"></div><button type="submit" class="w-full bg-gradient-to-r from-yellow-200 via-[#D4AF37] to-[#B8860B] text-black rounded-full py-4 font-black flex items-center justify-center gap-3"><i class="fa-brands fa-whatsapp text-xl"></i> تأكيد الطلب 01015861991</button></form></div></div></div>
+
+<script>
+const offersData=[
+  {id:101,title:"عرض الدمار الأول",sub:"الأكثر طلباً 🔥",desc:"٢ كبدة فينو + ٢ سدق فينو + ١ كفته فينو",price:50,old:85,save:35},
+  {id:102,title:"العرض التاني",sub:"وفر 30 جنيه",desc:"٤ كفته فينو + ٤ سدق فينو + ٢ كبدة فينو",price:100,old:130,save:30},
+  {id:103,title:"ملك الحواوشي",sub:"عرض الحواوشي",desc:"٥ حواوشي ب 100ج بدل 125ج",price:100,old:125,save:25},
+  {id:104,title:"العرض البلدي",sub:"ميكس بلدي فاخر",desc:"٢ كفته بلدي + ٢ سدق بلدي + ٢ حواوشي",price:110,old:140,save:30},
+  {id:105,title:"عرض العيلة الملكي",sub:"يكفي 4 أفراد - وفر 40ج",desc:"١٠ سدق فينو + ٥ كفته فينو + ٥ كبدة فينو",price:220,old:260,save:40},
+];
+const menuData=[{n:"كبدة اسكندراني",f:15,b:20},{n:"سدق اسكندراني",f:10,b:20},{n:"كفته طاسة",f:15,b:25},{n:"كبدة ردة",f:15,b:25},{n:"مشكل",f:15,b:25},{n:"سدق موزريلا",f:15,b:25},{n:"سبيشيال مسعد",f:20,b:25},{n:"حواوشي سادة",f:null,b:25},{n:"حواوشي موزريلا",f:null,b:30},];
+let cart=[];
+function renderOffers(){
+  document.getElementById("offers").innerHTML=offersData.map(o=>`
+    <div class="offer-card rounded-[1.8rem] p-6">
+      <div class="flex justify-between items-start mb-4">
+        <img src="logo.png" class="w-10 h-10 rounded-full border border-gold/50">
+        <span class="bg-red-600 text-white text-[10px] font-black px-3 py-1 rounded-full">وفر ${o.save}ج</span>
+      </div>
+      <p class="text-[11px] tracking-widest text-gold/70">${o.sub}</p>
+      <h3 class="text-2xl font-black mt-1">${o.title}</h3>
+      <p class="text-sm text-gray-300 mt-3 min-h-[40px]">${o.desc}</p>
+      <div class="mt-6 flex items-center justify-between">
+        <div><p class="text-xs text-gray-500 line-through">${o.old}ج</p><p class="text-3xl font-black gold-text">${o.price} <span class="text-sm text-white">ج</span></p></div>
+        <button onclick="addOffer(${o.id})" class="bg-gradient-to-r from-yellow-200 to-[#D4AF37] text-black px-6 py-3 rounded-full font-black text-sm">اطلب الآن</button>
+      </div>
+    </div>
+  `).join('');
+}
+function renderMenu(){
+  document.getElementById("menu").innerHTML=menuData.map(m=>`
+    <div class="glass rounded-2xl p-4 flex justify-between items-center">
+      <div><p class="font-bold">${m.n}</p><p class="text-[11px] text-gray-500">بلدي • طازج</p></div>
+      <div class="flex gap-2">
+        ${m.f?`<button onclick="addItem('${m.n} فينو',${m.f})" class="bg-white/[0.06] border border-white/10 px-4 py-2 rounded-full text-xs">فينو <b class="text-gold">${m.f}ج</b></button>`:''}
+        <button onclick="addItem('${m.n} بلدي',${m.b})" class="bg-gradient-to-r from-yellow-200 to-[#D4AF37] text-black px-4 py-2 rounded-full text-xs font-black">${m.b}ج بلدي</button>
+      </div>
+    </div>
+  `).join('');
+}
+function addOffer(id){const o=offersData.find(x=>x.id===id);cart.push({name:o.title+" - "+o.desc,price:o.price,qty:1});upd();}
+function addItem(name,price){cart.push({name,price,qty:1});upd();}
+function upd(){
+  const total=cart.reduce((s,i)=>s+i.price*i.qty,0),count=cart.reduce((s,i)=>s+i.qty,0);
+  document.getElementById("cart-count").innerText=count;
+  document.getElementById("cart-total-top").innerText=total+"ج";
+  document.getElementById("cart-final").innerText=total+"ج";
+  document.getElementById("cart-items").innerHTML=cart.map((it,i)=>`<div class="flex justify-between items-center bg-white/[0.04] border border-white/5 p-3 rounded-2xl"><div class="text-sm font-bold max-w-[70%]">${it.name}</div><div class="flex items-center gap-3"><span class="text-gold font-black">${it.price}ج</span><button onclick="cart.splice(${i},1);upd()" class="w-7 h-7 rounded-full bg-white/10"><i class="fa-solid fa-xmark text-xs"></i></button></div></div>`).join('')||`<div class="text-center py-10 text-gray-500 flex flex-col items-center gap-3"><img src="logo.png" class="w-16 h-16 rounded-full opacity-30"><p>السلة فارغة</p></div>`;
+  if(count)document.getElementById("cart").classList.remove("hidden");
+}
+function toggleCart(){document.getElementById("cart").classList.toggle("hidden");}
+function sendWA(e){
+  e.preventDefault();
+  const name=document.getElementById("n").value, phone=document.getElementById("p").value, addr=document.getElementById("a").value;
+  let tot=0,msg=`*🔥 طلب ملكي - كبدة مسعد - ${name}*%0A📞 ${phone}%0A📍 ${addr}%0A%0A`;
+  cart.forEach(c=>{tot+=c.price*c.qty;msg+=`• ${c.name} = ${c.price}ج%0A`;});
+  msg+=`%0A*الإجمالي: ${tot}ج*`;
+  window.open(`https://wa.me/201015861991?text=${msg}`,'_blank');
+}
+renderOffers();renderMenu();
+</script>
+</body>
+</html>
